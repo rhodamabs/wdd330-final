@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Website App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside id="banner">
+    Winter Storm Warning in effect until October 31st &nbsp;<button id="close">&#x274C;</button>
+  </aside>
+  <img src="images/moon.png" id="icon" alt="Click For Light/Dark Mode">
+  <header>
+    <input type="text" class="search-box" placeholder="Search for a city...">
+  </header>
+  <main>
+    <section class="location">
+      <div class="city">Getting Location</div>
+      <div class="date">Date Here</div>
+    </section>
+    <div class="current">
+      <div class="temp">0<span>°F</span></div>
+      <div class="weather">Current Weather</div>
+      <div class="hi-low">0°F / 0°F</div>
+    </div>
+    <div class="fiveDay">
+      <input type="checkbox" id="dropdown1">
+      <label for="dropdown1">5 Day Forecast</label>
+        <div class="content">
+          <section class="fiveDayForecast">
+            <ul class="multiDay">
+              <hr>
+              <li>
+                <span class="day">Monday</span>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <span class="temp">
+                  <span class="hi">--</span><span class="lo">--</span>
+                </span>
+              </li>
+              <hr>
+              <li>
+                <span class="day">Tuesday</span>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <span class="temp">
+                  <span class="hi">--</span><span class="lo">--</span>
+                </span>
+              </li>
+              <hr>
+              <li>
+                <span class="day">Wednesday</span>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <span class="temp">
+                  <span class="hi">--</span><span class="lo">--</span>
+                </span>
+              </li>
+              <hr>
+              <li>
+                <span class="day">Thursday</span>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <span class="temp">
+                  <span class="hi">--</span><span class="lo">--</span>
+                </span>
+              </li>
+              <hr>
+              <li>
+                <span class="day">Friday</span>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <span class="temp">
+                  <span class="hi">--</span><span class="lo">--</span>
+                </span>
+              </li>
+              <hr>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
