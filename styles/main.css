@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Dark Mode - Source: https://www.youtube.com/watch?v=9LZGB3OLXNQ */
+  :root{
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --primary-bg: url('../images/bg_day.png');
+  }
+  .dark-theme{
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --primary-bg: url('../images/bg_night.png')
+
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-image: var(--primary-bg);
+    background-size: cover;
+    background-position: top center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+  }
+
+  #icon {
+    margin-top: 5px;
+    cursor: pointer;
+    position: relative; left: 320px;
+  }
+ 
+
+/* banner info */
+  #banner {
+    display: none;
+    text-align: center;
+    background: lightblue;
+    padding: 10px;
+    font-size: .9rem;
+    font-weight: bold;
+    border-top : 5px dashed black;
+    border-bottom : 5px dashed black;
+    line-height: .9;
+  }
+
+  #close {
+    padding: 2px;
+    background-color: #000;
+  }
+  
+  header input {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 16px 0px 16px 0px;
+    border-bottom: 3px solid #DF8E00;
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+  }
+  header input::placeholder{
+    color: black;
+  }
+  
+  header input:focus {
+    background-color: white;
+  }
+  
+  main {
+    flex: 1 1 100%;
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .location .city {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .location .date {
+    color: #FFF;
+    font-size: 16px;
+  }
+  
+  .current .temp {
+    color: #FFF;
+    font-size: 102px;
+    font-weight: 900;
+    margin: 30px 0px;
+    text-shadow: 2px 5px rgba(0, 0, 0, 0.6);
+  }
+  
+  .current .temp span {
+    font-weight: 500;
+  }
+  
+  .current .weather {
+    color: var(--primary-color);
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .current .hi-low {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 0px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+  }
+
+
+/* Drop Down Accordion */
+
+  .fiveDay p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-indent: 30px;
+    padding: 30px;
+    align-items: left;
+  }
+
+  .fiveDay .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+  .fiveDay label {
+    display: block;
+    padding: 20px 70px;
+    font-size: 1.25rem;
+    margin: 0 0 1px 0;
+    cursor: pointer;
+    background-color: rgba(93, 92, 92, 0.679);
+    border-radius: 16px 0px 16px 0px;
+    border-bottom: 3px solid #DF8E00;
+    color: white;
+    transition: ease 0.5s;
+    text-align: center;
+  }
+
+/* label hover color change */
+  .fiveDay label:hover {
+    background: white;
+    color:#000;
+  }
+
+  .fiveDay .content {
+    background: #c89f70;
+    padding: 10px 25px;
+    border: 1px solid #a7a7a7;
+    margin: 0 0 1px 0;
+    border-radius: 3px;
+    text-align: center;
+    color: #000;
+  }
+
+  .fiveDay input + label + .content {
+    display: none;
+  }
+
+  .fiveDay input:checked + label + .content {
+    display: block;
+  }
+
+  .fiveDay input[type="checkbox"]  {
+    display: none;
+  }
+  
+
+/* 5 Day Forecast */
+  .fiveDayForecast {
+    max-height: calc(100vh - 28rem);
+    height: 50rem;
+    overflow-y: auto;
+    padding: .5rem;
+  }
+
+  hr {
+    height: 1px;
+    background-color: black;
+    border: none;
+  }
+
+  .fiveDayForecast .forecast {
+    height: initial;
+    overflow: auto;
+  }
+
+  .multiDay {
+    margin-top: 1rem;
+  }
+
+  .multiDay * {
+    font-size: 1.25rem;
+  }
+
+
+/* GRID LAYOUT */
+  .multiDay li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-top: .75rem;
+  }
+  
+  .fiveDayForecast .temp {
+    justify-self: end;
+  }
+
+  .lo {
+    color: gray;
+  }
+
+  .lo::before {
+    content: ' ';
+  }
+
+  .lo::after, .hi::after, .todays-forecast {
+    content: '°';
+  }

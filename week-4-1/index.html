@@ -4,14 +4,168 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 330 Portfolio Home</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>WDD 330 Week -4-1</title>
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
     <header id="main-header"></header>
     </aside>
     <main class="main-container">
-        <h2>Weekly Notes</h2>    
+        <h2>Notes Week 4 Part one</h2> 
+        <section>
+            <h3><u>JavaScript Functions</u></h3>
+            <p>
+                <ol>
+                    <li>javascript functions are first-class objects because they can be passed around like any other values.</li>
+                    <li>They have properties and methods</li>
+                    <li>They can be passed as parameters to other functions and can be returned by other functions.</li>
+                    <li>They are a flexible tool to work with.</li>
+                </ol>
+                Functions have a length property that returns the number of parameters the function has. 
+                They also have call() and apply() methods. These two works the same way, the difference is in 
+                the way the arguments are passed. For apply() the arguments are passed as an array regardless of 
+                the number of arguments of the function. They can be used to set the value of this inside a 
+                function to an object that is provided as the first argument. <br><br>
+                I can create custom properties for functions.
+                For example, adding the description property that explains what the function does.
+            </p>
+            <h3><u>Memoization</u></h3>
+                <p>
+                   A useful feature when working with functions that take some time to compute. 
+                   The result can be saved in a catch property to be returned whenever the same argument is
+                   used again. Example of storing a result in a catch below. <br><br>
+                   function square(x){ <br>
+                    square.cache = square.cache || {}; <br>
+                    square.cache[x] = x*x;  <br>
+                }    return square.cache[x]}
+                </p>
+        </section> 
+        <h2><u>Types of functions we have in JavaScript</u></h2> 
+        <section>
+            <h3><u>Immediately Invoked Function Expressions</u></h3>
+            <p>
+                -	Anonymous  function that invoked as soon as they are invoked <br>
+                -	This is achieved by adding () at the end of the function definition. <br>
+                -	The function also has to be made into an expression, which is done by
+                     placing the whole declaration inside parentheses, as in this example: <br><br>
+                     (function(){ <br>
+                         const temp = 'World'; <br>
+                         console.log(`Hello ${temp}`); <br>
+                        })(); <br><br>
+                
+                -	Useful for performing tasks and keeping the variables wrapped within the scope of the function. <br>
+                -	The global namespace while have fewer variable names polluting it. <br>
+                -	IIFE functions are useful when working with temporal variables.
+                 This reduces errors because the variable exists only while the IIFE function is invoked. <br>
+                -	IIFE can be used for initializing that is run once and will not be reused again. <br>
+                -	We can use IIFE to enforce strict mode and avoid sloppy coding practices. <br>
+
+                function() {  <br>
+                      'use strict'; <br>
+                        // All your code would go inside this function br
+                        })(); <br>
+
+                -	We can use IIFE functions to enclose code blocks inside their private scopes so they won’t 
+                interfere with other parts of the program. <br>
+                -	This allows us to add and remove code separately like in the example below. <br>
+
+                function() {   <br>
+                     // block A    const name = 'Block A';  <br>
+                       console.log(`Hello from ${name}`);   <br>
+                     }()); <br>
+                (function() {   <br>
+                     // block B    const name = 'Block B';  <br>
+                       console.log(`Hello from ${name}`); <br>
+                    }()); <br>
+                -	We can use this approach for testing purposes
+            </p>
+            <h3><u>Functions that Define and Rewrite Themselves</u></h3>
+            <p>
+                -	In JavaScript functions call, define and redefine themselves. <br>
+                -	This is achieved by assigning an anonymous function to a variable that has 
+                the same name as the function like an example below: <br>
+                function party(){   <br>
+                      console.log('Wow this is amazing!');  <br>
+                      party = function(){   <br>
+                          console.log('Been there, got the T-Shirt');  <br>
+                                  }} <br>
+            </p>
+            <h3><u>Recursive Functions</u></h3>
+            <p>
+                -	functions that invoke until a certain condition is met. <br>
+                -	Useful when there is some iteration involved.
+            </p>
+            <h3><u>Callbacks types</u></h3>
+            <p>
+                -	These are functions passed to other functions as arguments and then 
+                invoked inside the function they are passed to. <br>
+                -	They are used to facilitate event-driven asynchronous programming. <br>
+                -	Allows the program to run than wait for certain events to occur. <br>
+                -	Callback functions returns other functions. 
+            </p>
+            <h3><u>Promises</u></h3>
+            <p>
+                -	Represent the future result of an asynchronous operation, perform the same operations 
+                as callbacks but simplify the process and avoid convoluted code from using multiple callbacks. <br>
+                -	They can be chained using the .then method <br><br>
+                -	login(userName) <br>
+                .then(user => <br>
+                getPlayerInfo(user.id)) <br>
+                 .then(info => <br>
+                 loadGame(info)) <br>
+                 .catch( throw error)
+            <h3><u>Async Functions</u></h3>
+            <p>
+                -	functions are preceded by the async keyword and allow you to write asynchronous code as 
+                if it was synchronous. <br>
+                -	achieved by using the await operator before an asynchronous function. <br>
+                -	wrap the return value of the function in a promise that can then be assigned to a variable. 
+                The next line of code is not executed until the promise is resolved. 
+            </p>
+            <h3>CSS3 Transform and Transition</h3>
+            <p>
+                -	CSS3 can now do more than change appearance. <br> 
+                -	It can tilt, scale, move, and flip elements
+            </p>
+            <h3><u>Transform properties</u></h3>
+             <p>   -	Translate <br>
+                o	Moves elements in all directions (left, right. up and down); <br>
+
+                -	Rotate <br>
+                o	Rotates an element around the point of origin by a specified angle <br>
+                -	Scale br
+                o	Scale an element by defined factors horizontally and then vertically <br>
+                -	Skew <br>
+                o	Specifies skews along the x and y-axis. 
+             </p>
+                <h3><u>Transition</u></h3>
+                -	Allows values of CSS properties to over time. <br>
+                -	Has the following properties <br>
+
+                transition-property <br>
+                -	defines the CSS properties of the element that should be transitioned, with all for 
+                all properties being the default.	<br>
+                transition-duration <br>
+                -	sets how long the transition will take: <br>
+                 the duration of time it takes to go from the default state to the transitioned state.
+                 <br> transition-timing-function <br>
+                transition-delay <br>
+                -	lets you control the pace of the transition in even more granular detail.
+            </p>
+                <h3><u>Animations</u></h3>
+                <p>
+                -	animate elements over time; <br> 
+                -	use the @keyframes rule <br>
+                <h4><u>Animation Properties </u></h4>
+                -	animation-name <br>
+                -	animation-duration <br>
+                -	animation-timing-function <br>
+                -	animation-iteration-count <br>
+                -	animation-direction <br>
+                -	animation-fill-mode <br>
+                -	animation-play-state <br>
+            </p>
+        </section>          
         <footer id="main-footer"></footer> 
     </main>    
 </body>

@@ -4,14 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 330 Portfolio Home</title>
+    <title>WDD 330 Week 5 1-1</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header id="main-header"></header>
     </aside>
     <main class="main-container">
-       
+       <h2>Notes Week 5 Part 1</h2>
+       <section>
+        <p>
+           <ul>
+            <li>It is the latest version of hypertext markup language to create web pages.</li>
+            <li>It has a large number of new features to the specification</li>
+            <li>It has brought together a number of related technologies</li>
+            <li>HTML5 specification is separated into modules allowing different features to be developed at different paces and then 
+                implemented without having to wait for other features to be completed.</li>
+            <li>This means that when a previously unforeseen development occurs, a new module can be created to cater for it.</li>
+            <li>HTML5 has a data attribute which is a way of embedding data in a web page using custom attributes that are ignored by the browser.</li>
+            <li>These attributes are private to a page, meaning they can not be used by external sources. Their purpose is to be used by Javascript.</li>
+            <li>Data attributes are perfect for adding data that can be used as a hook that the program utilizes to access information about a particular element on the page</li>
+            <li>The names of the attributes are to be decided by the developer but have to be prefixed with the word data as follows:</li>
+           </ul>	
+	
+             data-powers = 'flight superSpeed' <br>
+        	 data-rating = '5'  <br>
+        	 data-dropdown data-user = 'DAZ' <br>
+        	 data-max-length = '32' <br>
+
+           <ul>
+            <li>The information contained in these attributes is used to identify certain elements. The values can also be used to filter different elements.</li>
+            <li>Each element has a dataset property that can be used to access any data- attributes it contains</li>
+            <li>provide a convenient way of adding data directly into the HTML markup, enabling a richer user experience</li>
+           </ul>
+        </p>
+        <h3><u>HTML5 Web Storage</u></h3>
+        <p>
+            <ol>
+               <li>provides a key-value store on the client’s computer that is similar to using cookies</li>
+               <li>has fewer restrictions, more storage capacity</li>
+               <li>is easier to use and makes it perfect for storing information about users, as well as storing application-specific information that can then be used during future sessions.</li>
+            </ol>
+        </p>
+        <h3><u>The Web Storage API has some crucial differences with cookies:</u></h3>
+        <p>
+            <ul>
+                <li>Information stored is not shared with the server on every request.</li>
+                <li>Information is available in multiple windows of the browser (but only if the domain is the same).</li>
+                <li>Storage capacity limit is much larger than the 4KB limit for cookies ( There is no actual limit in the specification, but most browsers have a limit set at 5GB per domain.)</li>
+                <li>Any data stored does not automatically expire as it does with cookies. This potentially makes cookies a better choice for something like showing a popup once a day.</li>
+            </ul>
+        </p>
+        <p>
+            All browsers that support web storage API, the window object has a 
+            localStorage property which is a native object with 
+            <ol>
+                <li>getItem()</li>
+                <li>setItem()</li>
+                <li>removeItem()</li>
+                <li>clear()</li>
+            </ol>
+            Web Sttorage APIs provides a useful way of storing various types of information on a user’s computer without the restriction of cookies.
+        </p>
+        <p>
+            <h3><u>Geolocation</u></h3>
+            <ul>
+                <li>to obtain the geographical position of the device</li>
+                <li>geolocation is a property of the navigator object it has a getCurrentPosition which returns a position object.</li>
+            </ul>
+        </p>
+            <h4>The position object has</h4>
+        <p>
+            <ol>
+                <li>position.speed property returns the ground speed of the device in meters per second.</li>
+                <li>position.altitude property returns an estimate of the device’s altitude in meters above the WGS84 ellipsoid, which is a standard measurement for the center of the Earth.</li>
+                <li>position.heading property returns the direction the device is moving in. This is measured as a bearing in degrees, clockwise from North.</li>
+                <li>position.timestamp property returns the time that the position information was recorded.</li>
+            </ol>
+        </p>	
+         <h3><u>  Web Workers</u></h3>
+         <p>
+            <ul>
+                <li>allow processes to be run in the background, adding support for concurrency in JavaScript.</li>
+                <li>Start by creating new worker</li>
+            </ul>
+            const worker = new Worker('task.js');
+            <ol>
+                <li>It has a postMessage() menthod</li>
+                <li>Terminate() and close method. </li>
+                <li>A this keyword is used to refer to the worker</li>
+            </ol>
+         </p>	
+            <h4>Types of web workers</h4>
+            <p>
+                <ul>
+                    <li>dedicated web workers</li>
+                    <li>shared web workers</li>
+                    <li>Service Workers</li>
+                </ul>
+            </p>
+            <h4>Websockets</h4>	
+            <p>
+                <ol>
+                    <li>a new protocol that allows two-way communication with a server – also known as push messaging. </li>
+                    <li>This means that a connection is kept open and responses are ‘pushed’ to the client as soon as they are received.</li>
+                </ol>
+            </p>
+            <h4>Notifications</h4>
+            <p>
+                <ul>
+                    <li>allows you to show messages using the system's notifications</li>
+                    <li>these are pop-up messages in the corner of the screen, but it changes depending on the operating system.</li>
+                    <li>Possible using requestPermission () method of notification global object and returns a permission property</li>
+                </ul>
+            </p>	
+            <h4>Multimedia</h4>
+            <p>
+                HTML5 introduced the 'audio' and 'video' tags used to insert audio and video clips into a web page 
+                audio src='/song.mp3' controls Your browser does not support the audio element. <br>
+                video src='http://movie.mp4' controls   Your browser does not support the video element.
+                <ol>
+                    <li>Has play() method</li>
+                    <li>Pause()method</li>
+                    <li>Volume property</li>
+                    <li>Muted</li>
+                    <li>currentTime</li>
+                    <li>playbackRate</li>
+                    <li>loop</li>
+                    <li>duration</li>
+                
+                </ol>
+            </p>
+          <h4>  Canvas API</h4>
+          <p>
+            <ul>
+                <li>use canvas element is used with the width and height</li>
+                <li>canvas is accessed using JavaScript by querying by using document. getElementById() method</li>
+                <li>it has a variety of methods and properties that can be used to draw images on canvas</li>
+            </ul>
+        </p>
+       </section>
         <footer id="main-footer"></footer> 
     </main>    
 </body>

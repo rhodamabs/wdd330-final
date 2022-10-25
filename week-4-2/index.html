@@ -4,14 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 330 Portfolio Home</title>
+    <title>WDD 330 Week 4-2</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header id="main-header"></header>
     </aside>
     <main class="main-container">
-        <h2>Weekly Notes</h2>    
+        <h2>Notes Week 4 Part 2</h2> 
+        <section>
+            <p>
+                <h3><u>JSON WEB TOKENS</u></h3>
+
+                -	JWT (JASON Web Tokens) is a standard that defines a compact, self-contained way for securely 
+                transmitting information between parties as a JSON object. <br>
+                -	Compact because of size, it can be transmitted through URL, POST parameter, or HTTP header <br>
+                -	Self-contained because the payload contains all the required information about the user, 
+                avoiding database requiring more than once. <br>
+                -	The information can be verified as well as trusted because it is digitally signed with a 
+                secret or a private/public key pair using RSA. 
+            </p>
+            <h3><u>USES of JWT</u></h3>
+            <p>
+                -	Useful to authenticate users according to their token rights and privileges <br>
+                -	A good way of transmitting data because the sender can be verified to confirm who they are, 
+                data can also be verified if it did not change
+            </p>
+            <h3><u>TOKEN STRUCTURE</u></h3>
+            <p>
+                <h4>Header</h4>
+                Has two parts, the token and the hashing algorithm <br>
+                { <br>
+                    -	  'alg': 'HS256', <br>
+                    -	  'typ': 'JWT' <br>
+                    -	} <br>
+                    -	this is encoded using Base64URL encoding. <br>
+                <h4>Payload</h4>   
+                Contains the claims which are statements about the entity (USER) and additional data. <br>
+                -	Reserved claims: These are a set of predefined claims, which are not mandatory but recommended,
+                 thought to provide a set of useful, interoperable claims. Some of them are: iss (issuer), 
+                 exp (expiration time), sub (subject), aud (audience), among others. <br>
+                -	Public claims: These can be defined at will by those using JWTs. But to avoid collisions they 
+                should be defined in the IANA JSON Web Token Registry or be defined as a URI that contains a 
+                collision resistant namespace. <br>
+                -	Private claims: These are the custom claims created to share information between parties that 
+                agree on using them. <br>
+                -	{ <br>
+                -	  'sub': '1234567890', <br>
+                -	  'name': 'John Doe', <br>
+                -	  'admin': true <br>
+                -	} <br>
+                -	this is encoded using Base64URL encoding. <br>
+                -	Signature <br>
+                -	To create the signature part you have to take the encoded header, the encoded payload, 
+                a secret, the algorithm specified in the header, and sign that. <br>
+                -	HMACSHA256( <br>
+                -	  base64UrlEncode(header) + '.' + <br>
+                -	  base64UrlEncode(payload), <br>
+                -	  secret) <br>
+                -	} <br>
+                -	this is encoded using Base64URL encoding. <br>
+
+                -	The token is then all three put together separated by dot. <br>
+
+            </p>
+
+            <h3><u>HOW JWT WORK</u></h3>
+            <p>
+                -	When a user logins successfully a JWT is returned, it should not be kept longer than is necessary for security reasons <br>
+                -	When a user accesses a protected server, a JWT is sent in the Authorization header using bearer schema. <br>
+                 The server uses the information to verify the user without the need to query the database once more. <br>
+                -	This allows to fully rely on data APIs that are stateless and even make requests to downstream services. 
+                It doesn’t matter which domains are serving your APIs, as Cross-Origin Resource Sharing (CORS) won’t be an issue as
+                 it doesn’t use cookies
+            </p>
+            <h3><u>DEVELOP, DEBUG, LEARN? (Chris Heilmann)</u></h3>
+            <p>
+                -	I learnt that I should not be caught up in the rush of developing new things. <br>
+                -	I should not focus on the wrong things but consider the experience of the end user. <br>
+                -	I should take not of the application’s accessibility, security, performance and may other important aspects
+                 that provides a great experience for those that will use the app. <br>
+                -	I should not fall in the trap of depending on different platforms and lose the opportunity to grow. <br>
+                -	Now that there are so many tools available. I should make use of them to make myself a better programmer.  <br>
+                -	I can use these tools to learn , debug and develop great applications <br>
+
+            </p>
+        </section>   
         <footer id="main-footer"></footer> 
     </main>    
 </body>

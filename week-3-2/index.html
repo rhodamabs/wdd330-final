@@ -28,7 +28,65 @@
             </p>
             <h3><u>Form Attributes</u></h3>
             <p>
-                
+               <ul>
+                    <li>Name, the name of the form.</li>
+                    <li>Action, the URL that the form will be submitted to so the data can be processed.</li>
+               </ul> 
+               The elements of the form can be accessed using the document. form property that returns all forms 
+               in the order they appear in the markup. This property is useful we can access and manipulate the 
+               form object numeric index notation or by name attribute as follows. <br><br>
+               const form = document.forms[0]; <br>
+               const form = document.getElementsByTagname('form')[0]; <br>
+               const form = document.forms.search; <br>
+               const form = document.forms['search']; <br> <br>
+               The element attribute allow manipulation of the individual elements in the form.
+            </p> 
+            <h3><u>Properties and methods</u></h3>
+            <p>
+                <ul>
+                    <li>Form.submit() – use the type attribute to specify the submit the form</li>
+                    <li>Form.resets() -method will reset all the form controls back to their initial 
+                        values specified in the HTML</li>
+                    <li>Form.action - can be used to set the action attribute of a form, so it’s sent to a
+                        different URL to be processed on the server.</li>
+                </ul>
+            </p>
+            <h3><u>Form .events</u></h3>
+            <p>
+                <ul>
+                    <li>Focus -when an element is focused on</li>
+                    <li>Blur - when the user moves the focus away from the form element.</li>
+                </ul>
+            </p>
+            <h3><u>Form Controls</u></h3>
+            <p>
+                <ul>
+                    <li>Input </li>
+                    <li>Select</li>
+                    <li>Text-area</li>
+                </ul>
+            </p>
+            <h3><u>Types of Input fields</u></h3>
+            <p>
+                <ul>
+                    <li>Text input</li>
+                    <li>Password</li>
+                    <li>Checkbox</li>
+                    <li>Radio button</li>
+                    <li>Hidden input</li>
+                    <li>File input</li>
+                    <li>Selects</li>
+                </ul>
+            </p>
+            <h3><u>Validation</u></h3>
+            <p>
+                <ul>
+                    <li>the process of checking whether a user has entered the information into a form correctly</li>
+                    <li>Required field</li>
+                    <li>Email Format</li>
+                    <li>Validating numbers</li>
+                    <li>Validating passwords</li>
+                </ul>
             </p>
         </section>    
         <footer id="main-footer"></footer> 
@@ -36,45 +94,3 @@
 </body>
 </html>
 
-
-	
-	
-<form></form>
-	
-	
-	
-	
-	Name, the name of the form.
-	Action, the URL that the form will be submitted to so the data can be processed.
-The elements of the form can be accessed using the document. form property that returns all forms in the order they appear in the markup. This property is useful we can access and manipulate the form object numeric index notation or by name attribute as follows.
-const form = document.forms[0];
-const form = document.getElementsByTagname('form')[0];
-const form = document.forms.search;
-const form = document.forms['search'];
-The element attribute allow manipulation of the individual elements in the form.
-Properties and methods
-	Form.submit() – use the type attribute to specify the submit the form
-	Form.resets() -method will reset all the form controls back to their initial values specified in the HTML
-	Form.action - can be used to set the action attribute of a form, so it’s sent to a different URL to be processed on the server.
-Form .events 
-	Focus -when an element is focused on
-	Blur - when the user moves the focus away from the form element.
-Form Controls
-	Input 
-	Select
-	Text-area
-Types of Input fields
-	Text input
-	Password
-	Checkbox
-	Radio button
-	Hidden input
-	File input
-	Selects.
-Validation
-	the process of checking whether a user has entered the information into a form correctly
-	Required field
-	Email Format
-	Validating numbers
-	Validating passwords
- 
