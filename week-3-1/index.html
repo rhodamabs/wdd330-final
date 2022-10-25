@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Week 3-1</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header id="main-header"></header>
+    </aside>
+    <main class="main-container">
+        <h2>Notes Week 3 Part One</h2>  
+        <section>
+            <h3><u>Ajax</u></h3>
+            <p>
+                Ajax is a technique that allows web pages to communicate asynchronously with a server and 
+                dynamically update web pages without reloading. Allows data to be sent and received at the 
+                background. Web pages will update in response to user events while the rest of the program 
+                continue to run. Ajax stands for asynchronous JavaScript XML. Asynchronous meaning the program 
+                does wait for response to. It continues to run waiting for an event to fire when response is 
+                received. JavaScript send and receive data allowing updating of content in real-time.   
+            </p>
+            <h3><u>Same -origin policy</u></h3>
+            <p>
+                Browsers have same origin policy which blocks all requests from a domain that is different from 
+                the page making the request. The purpose is to stop any malicious JavaScript being run from an 
+                external source. Cross-origin resource sharing (CORS) provides a solution to this problem.
+            </p>
+            <h3><u>APIS</u></h3>
+            <p>
+                Application programming interface is a collection of methods that allow external access to another 
+                program or service. We have to enable CORS to access information from an API and sometimes authentication 
+                is required.
+            </p>
+            <h3><u>The Fetch API</u></h3>
+            <p>
+                <ul>
+                    <li>a living standard for requesting and sending data asynchronously across a network.</li>
+                    <li>uses promises to avoid callback hell, and also streamlines a number of concepts that had
+                        become cumbersome when using the XMLHttpRequest object</li>
+                </ul>
+                A fetch() takes the URL argument. <br>
+                fetch('https://example.com/data') <br>
+                .then( // code that handles the response )  <br>
+                .catch( // code that runs if the server returns an error )  <br>
+                Response has a ok and status properties <br>
+                const url = 'https:example.com/data'; <br><br>
+                
+                fetch(url) <br>
+                .then((response) => { <br>
+                    if(response.ok) { <br>
+                        return response; <br>
+                    } <br>
+                    throw Error(response.statusText); <br>
+                }) <br>
+                .then( response => // do something with response ) <br>
+                .catch( error => console.log('There was an error!') )  <br>
+                Redirect () used to redirect to another URLconst url = 'https:example.com/data'; <br> <br>
+                
+                fetch(url) <br>
+                .then((response) => { <br>
+                    if(response.ok) { <br>
+                        return response; <br>
+                    } <br>
+                    throw Error(response.statusText); <br>
+                }) <br>
+                .then( response => // do something with response )  <br>
+                .catch( error => console.log('There was an error!') ) <br>
+                Text() takes a stream of text from the response, reads it to completion and then returns
+                 a promise that resolves to a USV String object that can be treated as a string in JavaScript.
+                fetch(url) <br>
+                .then( response => response.text() ); // transforms the text stream into a JavaScript string <br>
+                .then( text => console.log(text) ) <br>
+                .catch( error => console.log('There was an error: ', error)) <br>
+                Blob() used to read a file of raw data, such as an image or a spreadsheet
+                fetch(url)
+                .then( response  <br>
+                => response.blob() ); // transforms the data into a blob object <br>
+                .then( blob => console.log(blob.type) ) <br>
+                .catch( error => console.log('There was an error: ', error)) <br>
+                Json() gommon methodthod of formatting data. <br><br>
+                
+                Hypertext Transfer Protocol <br><br>
+                
+                GET requests to retrieve resources <br><br>
+                
+                POST requests, usually used to create a resource but can actually perform any task <br><br>
+                
+                PUT requests to upsert, which means insert a resource or update it entirely <br><br>
+                
+                PATCH requests to make partial updates to a resource <br><br>
+                
+                DELETE requests to delete a resources 
+ 
+            </p>
+        </section>  
+        <footer id="main-footer"></footer> 
+    </main>    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Week-3-2</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header id="main-header"></header>
+    </aside>
+    <main class="main-container">
+        <h2>Notes Week 3  Part 2</h2>
+        <section>
+            <h3><u>Forms</u></h3>
+            <p>
+                <ul>
+                    <li>Forms are a common method of interacting with web pages.
+                         They are Google’s main component on their home page</li>
+                    <li>They are made up of the form element.</li>
+                    <li>Have controls like input fields, select menus, and buttons.
+                        The fields can be populated with data that can be processed once the form has been submitted.</li>
+                    <li>The data can now be processed on the front end with javascript. </li>
+                    <li>The form controls have values that are specified in the HTML, the user and javascript can change the values of the controls.</li>
+                    <li>We can increase usability and accessibility by using correct and semantic mark-up and WAI -AIRA labels</li>
+                </ul>
+            </p>
+            <h3><u>Form Attributes</u></h3>
+            <p>
+                
+            </p>
+        </section>    
+        <footer id="main-footer"></footer> 
+    </main>    
+</body>
+</html>
+
+
+	
+	
+<form></form>
+	
+	
+	
+	
+	Name, the name of the form.
+	Action, the URL that the form will be submitted to so the data can be processed.
+The elements of the form can be accessed using the document. form property that returns all forms in the order they appear in the markup. This property is useful we can access and manipulate the form object numeric index notation or by name attribute as follows.
+const form = document.forms[0];
+const form = document.getElementsByTagname('form')[0];
+const form = document.forms.search;
+const form = document.forms['search'];
+The element attribute allow manipulation of the individual elements in the form.
+Properties and methods
+	Form.submit() – use the type attribute to specify the submit the form
+	Form.resets() -method will reset all the form controls back to their initial values specified in the HTML
+	Form.action - can be used to set the action attribute of a form, so it’s sent to a different URL to be processed on the server.
+Form .events 
+	Focus -when an element is focused on
+	Blur - when the user moves the focus away from the form element.
+Form Controls
+	Input 
+	Select
+	Text-area
+Types of Input fields
+	Text input
+	Password
+	Checkbox
+	Radio button
+	Hidden input
+	File input
+	Selects.
+Validation
+	the process of checking whether a user has entered the information into a form correctly
+	Required field
+	Email Format
+	Validating numbers
+	Validating passwords
+ 

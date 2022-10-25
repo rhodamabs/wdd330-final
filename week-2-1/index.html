@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Notes Week-2-2</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header id="main-header"></header>
+    </aside>
+    <main class="main-container">
+        <h2>Notes Week 2 Part One</h2> 
+        <section>
+            <h3><u>Window Object</u></h3>
+            <p>
+                A window object is a global JavaScript object that represents the browser window that contains the 
+                web page. Browser Object Model (BOM) is a collection of properties and methods about the browser 
+                and computer screen. BOM enables us to query information about the browser being used, the screen 
+                size it is viewed in, previously visited pages, and many more. Several properties and methods are 
+                supported by all major browsers. These methods are available through the window object. Every 
+                browser window, tab, popup, frame, and iframe has a window object. Other javascript environments 
+                have a global object instead of a window object.
+                <br><br>
+                We do not need to use var, let, or const to declare global variables. These variables are 
+                properties of the global object (window object). The variables can do not need to refer to the 
+                window object when using them. ParseInt() and isNaN(), are global properties, so they are methods 
+                of a window object.
+            </p>
+            <h3><u>Dialogs</u> </h3>
+            <p>
+                These functions produce dialogues in the browsers. They all pause the execution of a program and 
+                should be used wisely.  Alert displays a message in a dialog box, confirm will display a 
+                confirmation dialog and a prompt request to a user for information.
+            </p>
+            <h3><u>Browser Information Properties</u></h3>
+            <ul>
+                <li>Navigator – display information about the browser being used using the userAgent.</li>
+                <li>Location – has information about the current URL of the current page.
+                    The href property returns the URL string.</li>
+                <li>Browser history used to access information about previously visited sites.</li>
+                <li>Document. write not encouraged archaic practice of writing an already loaded page</li>
+            </ul>
+            <p>
+                I read about templates but need more information to fully understand them.
+                 I understand that we can use the HTML tag template to create code snippets that will not be 
+                 loaded when the browser loads. These can be dynamically populated when needed using javascript. 
+                 They are useful and allow reusability of code, lessen coding time and allow many pages to use the 
+                 same snippet.
+            </p>
+        </section>   
+        <footer id="main-footer"></footer> 
+    </main>    
+</body>
+</html>

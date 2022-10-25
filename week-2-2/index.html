@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Notes Week-2-1</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header id="main-header"></header>
+    </aside>
+    <main class="main-container">
+        <h2>Notes Week 2 Part One</h2>
+        <section>
+            <h3>Templating</h3>
+            <p>
+                Templates make it easy to create reusable code. Templating is big on the web and most sites do 
+                server-side templating. This is achieved by using web components or application frameworks. It 
+                provides an easy way of defining reusable fragments of HTML that can be manipulated the same you 
+                would the contents of a document itself.
+                <br><br>
+                The contents of a template get parsed like regular HTML. The differences between the two are:
+                <ol>
+                    <li>Contents of a template are not rendered </li>
+                    <li>Scripts inside it won’t run</li>
+                    <li>Tags will not be evaluated</li>
+                    <li>It will not use external resources</li>	
+                </ol>
+                Content is a powerful property. DocumentFragment instances provide an API for manipulating 
+                It (content) like a global document. Inserting DocumentFragment into the DOM is faster than 
+                manipulating elements’ innerHTML property because the DOM structure already exist. We use 
+                templates to into the DOM. We make use of the clone method and set it to true. Templates are 
+                widely supported.
+                <br><br>
+                Single Page Applications enable users to get content in response to navigation without making 
+                a request to the server for new HTML. They use the window. Location method and rely on a router.
+                <br><br>
+                Errors and bugs are a way of life in programming. It is important to do all you can to minimize 
+                or find them early and deal with them. There errors that happen when something goes wrong. Errors 
+                that return a value, these create stack traces. There are also errors that are not enough to make 
+                a program crash. It is very important to test and debug because wrong information is misleading.
+                There are many tools we can use. These are:
+                <ol>
+                    <li>Using strict mode</li>
+                    <li>Linting tools</li>
+                    <li>Feature detectors</li>
+                    <li>Debugging tools</li>
+                    <li>Console</li>
+                    <li>Alerts</li>
+                    <li>Throwing exception</li>
+                    <li>Using browser etc</li>
+                </ol>
+            </p>
+        </section>
+
+        <footer id="main-footer"></footer> 
+    </main>    
+</body>
+</html>
