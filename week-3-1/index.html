@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 330 Week 3-1</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
     <header id="main-header"></header>
@@ -35,12 +38,13 @@
                 is required.
             </p>
             <h3><u>The Fetch API</u></h3>
-            <p>
                 <ul>
                     <li>a living standard for requesting and sending data asynchronously across a network.</li>
                     <li>uses promises to avoid callback hell, and also streamlines a number of concepts that had
                         become cumbersome when using the XMLHttpRequest object</li>
                 </ul>
+          
+            <p>
                 A fetch() takes the URL argument. <br>
                 fetch('https://example.com/data') <br>
                 .then( // code that handles the response )  <br>
@@ -68,6 +72,7 @@
                 }) <br>
                 .then( response => // do something with response )  <br>
                 .catch( error => console.log('There was an error!') ) <br>
+               
                 Text() takes a stream of text from the response, reads it to completion and then returns
                  a promise that resolves to a USV String object that can be treated as a string in JavaScript.
                 fetch(url) <br>

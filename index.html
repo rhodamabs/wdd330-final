@@ -6,22 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 330 Portfolio Home</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <script type="module" src="scripts/main.js" defer></script> 
 </head>
 <body>
-    <header id="main-header"></header>
+    <header id="main-header">
+        <div class="portfolio-header">
+            <h1>Rhoda Mabundu</h1>
+            <h2 class="prof">Aspiring Full Stack Web Developer</h2>
+        </div>      
+    </header>
+    <main class="main-container">
     <aside class="introduction">
         <img src="images/rhoda.jpg" alt="Rhoda Mabundu's Photo">
+            <h2 class="about-me-h2">About Me</h2>
         <p>
-            <h2>About Me</h2>
             I graduated in 2013 with a higher Diploma in Information Systems that is where a love of the web 
             technologies was planted.In 2020 I enrolled with BYU-Pathway Worldwide now pursing a degree
              in Applied Technology. I now have skills in front and back-end web development. I am looking 
              forward to a rewarding career.
         </p>
     </aside>
-    <main class="main-container">
+   
         <h2>Weekly Notes</h2>
-        <ul>
+        <ul class="home-page-list">
             <li><a href="week-1-1/index.html">Week 1 Notes Part 1</a></li>
             <li><a href="week-1-2/index.html">Week 1 Notes Part 2</a></li>
             <li><a href="week-2-1/index.html">Week 2 Notes Part 1</a></li>
@@ -34,8 +44,12 @@
             <li><a href="week-5-2/index.html">Week 5 Notes Part 2</a></li>
             <li><a href="final2/index.html">The Weather App WDD330</a></li>
         </ul>
-        <footer id="main-footer"></footer> 
     </main>   
-    <script type="module" src="scripts/main.js"></script> 
+    <footer id="main-footer">
+        <div id="authorName">&copy; <span id ='theYear'></span>.:|:.WDD 330 Portfolio .:|:. Rhoda Mabundu .:|:. 
+            Last Modified:  <span id = 'lu'></span>
+        </div> 
+        <script src="../scripts/last-modified.js"></script>
+    </footer> 
 </body>
 </html>
